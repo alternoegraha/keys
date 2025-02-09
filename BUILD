@@ -1,11 +1,11 @@
 package(default_visibility = ["//visibility:public"])
 
-filegroup(
-    name = "android_certificate_directory",
-    srcs = glob([
-        "*.pk8",
-        "*.pem",
-        "*.key",
-    ]),
-    visibility = ["//visibility:public"],
+android_app_certificate(
+  name = "keys",
+  visibility = ["//visibility:public"],
+  srcs = [
+    "*.pk8",
+    "*.pem",
+    "*.key",
+  ],
 )
